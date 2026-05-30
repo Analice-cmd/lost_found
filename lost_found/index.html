@@ -62,6 +62,36 @@
         </footer>
     </div>
 
-    <script src="JS/script.js" ></script>
+    <script>
+        async function carregarItens() {
+  try {
+    const resposta = await fetch('http://localhost:3000/items');
+    const itens = await resposta.json();
+
+    const box = document.getElementById('box1');
+    box.innerHTML = '';
+
+    itens.forEach(item => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+
+      card.innerHTML = `
+        <h3>${item.title}</h3>
+        <p><strong>📍 Local:</strong> ${item.location}</p>
+        <p>${item.description || ''}</p>
+        <p><strong>Marca:</strong> ${item.marca || 'N/A'}</p>
+      `;
+
+      box.appendChild(card);
+    });
+
+  } catch (erro) {
+    console.error('Erro ao carregar itens:', erro);
+  }
+}
+
+// chama automaticamente
+carregarItens();
+    </script>
 </body>
 </html>

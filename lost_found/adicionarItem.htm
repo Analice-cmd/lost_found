@@ -15,24 +15,35 @@
             </div>
         </header>
         <div id="col">
-            <label for="iptNome">Nome:</label>
-            <input id="iptNome" type="text">
-            <br>
-            <label for="iptCor">Cor:</label>
-            <input id="iptCor" type="text">
-            <br>
-            <label for="iptData">Encotrado:</label>
-            <input id="iptData" type="date">
-            <br>
-            <label for="iptMarca">Marca:</label>
-            <input id="iptMarca" type="text">
-            <br>
-            <label for="iptDataFab">Data de fabricação:</label>
-            <input id="iptDataFab" type="date">
-            <br><br>
-            <textarea name="descricao" rows="10" cols="120" placeholder="Descrição"></textarea>
+            <div id="col1">
+                <div id="imagem"></div>
+                <textarea id="descricao" name="descricao" style="resize:none;" rows="8" cols="60" placeholder="Descrição"></textarea>
+            </div>
+            <div id="col2">
+                <label for="iptNome">Nome:</label>
+                <input id="iptNome" type="text">
+                <br>
+                <label for="iptCor">Cor:</label>
+                <input id="iptCor" type="text">
+                <br>
+                <label for="iptData">Encotrado:</label>
+                <input id="iptData" type="date">
+                <br>
+                <label for="iptMarca">Marca:</label>
+                <input id="iptMarca" type="text">
+                <br>
+                <label for="iptDataFab">Data de fabricação:</label>
+                <input id="iptDataFab" type="date">
+                <br>
+                <label for="iptLocal">Local onde foi encotrado:</label>
+                <input id="iptLocal" type="text">
+                <br>
+                <label for="iptCategoria">Categoria:</label>
+                <input id="iptCategoria" type="text">
+                <br><br>
+                <button onclick="enviarItem()">Enviar</button>
+            </div>
         </div>
-        <button onclick="enviarItem()">Enviar</button>
         <footer>
             <ul>
                 <li><i class="material-icons">search</i></li>

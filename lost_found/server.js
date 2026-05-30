@@ -38,13 +38,14 @@ app.get('/users', async (req, res) => {
 });
 app.post('/items', async (req, res) => {
   try {
-    const { title, description, type, location, user_id } = req.body;
+    const { title, cor, data, marca, dataFab, categoria, description, type, location, user_id } = req.body;
 
     const newItem = await pool.query(
-      `INSERT INTO items (title, description, type, location, user_id)
-       VALUES ($1, $2, $3, $4, $5) RETURNING *`,
-      [title, description, type, location, user_id]
-    );
+  `INSERT INTO items 
+  (title, cor, data, marca, dataFab, categoria, description, type, location, user_id)
+  VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) RETURNING *`,
+  [title, cor, data, marca, dataFab, categoria, description, type, location, user_id]
+);
 
     res.json(newItem.rows[0]);
   } catch (err) {
