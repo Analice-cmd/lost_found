@@ -6,6 +6,8 @@
 }
 body {
     height:100vh;
+    background: radial-gradient(circle at top, #364e86, #020617);
+
 }
 #container {
     height:100vh;
@@ -15,7 +17,7 @@ body {
 header {
     height:20%;
     border:1px solid black;
-    background-color:rgb(38, 190, 140);
+    background-color:#364e86;
 }
 #buscar{
     width: 300px;
@@ -86,7 +88,7 @@ header {
 footer {
     height:8%;
     border:1px solid black;
-    background-color:rgb(38, 190, 140);
+    background-color:#364e86;
 }
 input {
     margin-top:30px;
@@ -114,7 +116,7 @@ li:hover {
 }
 
 #btn{
-    background-color:rgb(38, 190, 140);
+    background-color:rgb(189, 189, 189);
     border-radius: 100px;
     width: 100px;
     height: 30px;
